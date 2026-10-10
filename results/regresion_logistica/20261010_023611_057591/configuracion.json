@@ -1,0 +1,68 @@
+{
+  "seed": 42,
+  "n_splits": 10,
+  "n_repeats": 10,
+  "param_grid": {
+    "model__C": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "selector__k": [
+      5,
+      7,
+      9,
+      "all"
+    ]
+  },
+  "selection_metric": "roc_auc",
+  "metrics": [
+    "roc_auc",
+    "average_precision",
+    "accuracy",
+    "balanced_accuracy",
+    "precision_class_0",
+    "recall_class_0",
+    "f1_class_0",
+    "precision_class_1",
+    "recall_class_1",
+    "f1_class_1"
+  ],
+  "log_features": [
+    "RevolvingUtilizationOfUnsecuredLines",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfDependents"
+  ],
+  "sampling_strategy": 1.0,
+  "decision_threshold": 0.5,
+  "learning_fractions": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "n_training_rows": 96215,
+  "columns": [
+    "RevolvingUtilizationOfUnsecuredLines",
+    "age",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfDependents"
+  ],
+  "sklearn_version": "1.9.1",
+  "imblearn_version": "0.14.2"
+}
